@@ -1,4 +1,5 @@
 #include <QtGui>
+#include <iostream>
 #include "cropbag.h"
 
 class MainWin : public QMainWindow {
@@ -51,6 +52,12 @@ int main ( int argc, char* argv[] ) {
 	QStringList files;
 	for (int i = 1; i < argc; i++)
 		files << argv[i];
+		
+	if (!files.size()) {
+		std::cout << "Syntax:  cropcompare img1.jpg img2.jpg ... imgN.jpg" << std::endl;
+		exit(1);
+	}
+	
 	MainWin mainwin(files);
 	mainwin.show();
 	return app.exec();

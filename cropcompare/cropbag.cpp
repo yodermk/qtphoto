@@ -1,4 +1,3 @@
-#include <iostream>
 #include "cropbag.h"
 
 CropBag::CropBag ( QVector<QPixmap> &initphotos, QSize initsize ) :
