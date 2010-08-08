@@ -1,7 +1,7 @@
 #include "cropbag.h"
 
-CropBag::CropBag ( QVector<QPixmap> &initphotos, QSize initsize ) :
-	photos(initphotos), slicesize(initsize) {
+CropBag::CropBag ( QVector<QPixmap> &initphotos, QSize initsize, QWidget *parent ) :
+	QWidget(parent), photos(initphotos), slicesize(initsize) {
 	
 	setGridSize(photos.size());
 	position = QRect(QPoint(0,0), slicesize);

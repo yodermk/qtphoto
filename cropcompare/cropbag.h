@@ -9,7 +9,7 @@ class CropBag : public QWidget {
 	Q_OBJECT
 	
 public:
-	CropBag(QVector<QPixmap> &initphotos, QSize initsize = QSize(400, 400));
+	CropBag(QVector<QPixmap> &initphotos, QSize initsize = QSize(400, 400), QWidget *parent = 0);
 	virtual QSize sizeHint() const;
 
 public slots:
